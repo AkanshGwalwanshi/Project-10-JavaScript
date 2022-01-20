@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("images/bg-img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.main-div{
+    width: 350px;
+    height: 550px;
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.75);
+}
+.music-container{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#title{
+    margin-top: 20px;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+}
+#artist{
+    font-size: 15px;
+    font-weight: 200;
+    color: gray;
+}
+
+.img-container{
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+    overflow: hidden;
+    margin: 30px 0;
+}
+.img-container img{
+    width: 100%;
+    height: 100%;
+}
+.music-controls{
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px;
+}
+
+.fas{
+    transition: 0.3s;
+    font-size: 15px;
+    cursor: pointer;
+}
+#play{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+.fas:hover{
+    color: orange;
+}
+#play:hover{
+    color: white;
+    background-color: orange;
+}
+
+.anime{
+    animation: rotate 3s linear infinite ;
+}
+
+@media(max-width: 500px){
+    .main-div{
+        width: 280px;
+        height: 500px;
+    }
+    .img-container{
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Progress Style */
+
+.pg-bar-container{
+    width: 100%;
+    height: 40px;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+.progress-div{
+    width: 100%;
+    height: 5px;
+    border-radius: 4rem;
+    position: relative;
+    margin-top: 5px;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.4);
+    transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    -webkit-transition: all 1s linear;
+    cursor: pointer;
+    appearance: none;
+}
+.progress{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: black;
+    border-radius: 4rem;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.4);
+    transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    -webkit-transition: all 1s linear;
+    cursor: pointer;
+    appearance: none;
+}
+.progress-duration-meter{
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}

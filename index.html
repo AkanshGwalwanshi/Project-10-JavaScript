@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Music Player</title>
+
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/3a48d5805b.js" crossorigin="anonymous"></script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+
+</head>
+
+<body>
+
+    <div class="main-div">
+        <div class="music-container">
+            <h2 id="title">BELIEVER</h2>
+            <h3 id="artist">Imagine Dragons</h3>
+            <div class="img-container">
+                <img src="images/song-1-img.jpg" alt="">
+            </div>
+            <audio src="songs/song-1.mp3"></audio>
+
+            <!-- Progress Bar -->
+            <div class="pg-bar-container" id="pg-container">
+
+                <div class="progress-duration-meter">
+
+                    <div id="current-time">0:00</div>
+                    <div id="duration">3:36</div>
+
+                </div>
+
+                <div class="progress-div" id="progress-div">
+                    <div class="progress" id="progress"></div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="music-controls">
+                <i class="fas fa-backward" id="prev" onclick="prevSong()" title="Previous Track"></i>
+                <i class="fas fa-play" id="play" title="Play"></i>
+                <i class="fas fa-forward" id="next" onclick="nextSong()" title="Next Track"></i>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>
